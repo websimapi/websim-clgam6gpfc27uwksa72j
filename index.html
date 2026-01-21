@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Alphablocks Sandbox</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="importmap">
+    {
+      "imports": {
+        "interactjs": "https://esm.sh/interactjs",
+        "canvas-confetti": "https://esm.sh/canvas-confetti"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="app">
+        <div id="sandbox">
+            <!-- Blocks will be added here -->
+        </div>
+        
+        <div id="toolbar-container">
+            <div id="tabs">
+                <button class="tab-btn active" data-tab="alphabet">ABC</button>
+                <button class="tab-btn" data-tab="punctuation">!?.</button>
+                <button class="tab-btn" data-tab="languages">Ñ/Á</button>
+                <button class="tab-btn" data-tab="suggestions">👤</button>
+            </div>
+            <div id="toolbar">
+                <!-- Spawners will be added here -->
+            </div>
+        </div>
+
+        <div id="controls">
+            <button id="hand-btn" class="tool-btn active" title="Move Tool">✋</button>
+            <button id="knife-btn" class="tool-btn" title="Knife Tool">🔪</button>
+            <button id="palin-btn" class="tool-btn" title="Palindromeinator">🌀</button>
+            <button id="kb-btn" class="tool-btn" title="Keyboard Tool">⌨️</button>
+            <button id="nono-btn" title="The Words of Nono">🚫</button>
+            <button id="read-btn" title="Read Word">🔊</button>
+            <button id="clear-btn" title="Clear All">🗑️</button>
+        </div>
+
+        <div id="keyboard-modal" class="modal">
+            <div class="modal-content">
+                <input type="text" id="word-input" placeholder="Type a word..." maxlength="15">
+                <div class="modal-actions">
+                    <button id="spawn-word-btn">Spawn!</button>
+                    <button id="close-modal-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="nono-modal" class="modal">
+            <div class="modal-content">
+                <h3>The Words of Nono</h3>
+                <div id="nono-list">
+                    <!-- Forbidden words will be listed here -->
+                </div>
+                <div class="modal-actions">
+                    <button id="close-nono-btn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
